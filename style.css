@@ -1,0 +1,110 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations for bubbles and score effects */
+
+@keyframes scoreChange {
+  0% {
+    transform: scale(1);
+    color: green;
+  }
+  100% {
+    transform: scale(1.2);
+    color: black;
+  }
+}
+
+@keyframes timerFlash {
+  0%,
+  100% {
+    background-color: whitesmoke;
+  }
+  50% {
+    color: red;
+  }
+}
+
+.bubble {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(100, 200, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bubble.clicked {
+  animation: bubblePop 0.3s ease-out forwards;
+}
+
+#score {
+  animation: scoreChange 0.5s;
+}
+
+#timer.flash {
+  animation: timerFlash 1s ease-in-out infinite;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#bubble-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 10px;
+}
+
+#game-screen-top {
+  display: flex;
+  font-size: x-large;
+  font-weight: 700;
+  /* justify-content: space-between; */
+  gap: 40px;
+  padding: 20px;
+  justify-items: center;
+}

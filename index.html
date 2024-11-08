@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen">
+        <h1>Bubble Pop Game</h1>
+        <button id="start-btn">Start Game</button>
+        <button id="scorecard-btn">View Scorecard</button>
+    </div>
+
+    <div id="difficulty-screen" class="hidden screen">
+        <h2>Select Difficulty</h2>
+        <button class="difficulty-btn" game-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" game-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" game-difficulty="hard">Hard</button>
+        <button id="back-to-start">Back</button>
+    </div>
+
+    <div id="game-screen" class="hidden screen">
+        <div id="game-screen-top">
+            <div id="score">Score: 0</div>
+            <div id="timer">Time: 60</div>
+            <div id="hit-display">Hit: 0</div> 
+        </div>
+        <div id="bubble-container"></div> 
+    </div>
+    
+
+    <div id="game-over-screen" class="hidden screen">
+        <h2>Game Over</h2>
+        <div id="final-score">Your Score: 0</div>
+        <button id="play-again-btn">Play Again</button>
+        <button id="back-to-start-again">Back to Main Menu</button>
+    </div>
+
+    <div id="scorecard-screen" class="hidden screen">
+        <h2>High Scores</h2>
+        <ul id="score-list"></ul>
+        <button id="back-from-scorecard">Back to Main Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
